@@ -1,7 +1,7 @@
 import { View, Text, TextInput, Pressable, Image, Modal, Alert, KeyboardAvoidingView, Platform } from "react-native";
 import { Component } from "react";
 import style from "./style";
-import ListaUsuario from "./Arquivos Globais/Lista_usuario"
+import ListaUsuario from "./ArquivosGlobais/Lista_usuario"
 
 export default class Login extends Component {
   state = {
@@ -108,4 +108,5 @@ cadastrar() {
       </KeyboardAvoidingView>
     );
   }
+
 }
