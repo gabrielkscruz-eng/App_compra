@@ -1,7 +1,7 @@
 import { View, Alert, Text, TextInput, Pressable, Modal } from "react-native";
 import { Component } from "react";
 import style from "./style";
-import ListaGlobal from "//";
+import ListaGlobal from "";
 
 export default class RedefinirSenha extends Component {
   state = {
@@ -108,3 +108,4 @@ export default class RedefinirSenha extends Component {
     );
   }
 }
+
