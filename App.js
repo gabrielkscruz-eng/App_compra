@@ -27,12 +27,12 @@ export default function App() {
           options={{ headerShown: false }} 
         />
         <Stack.Screen 
-          name="RedefinirSenha" 
+          name="Redefinir Senha" 
           component={RedefinirSenha} 
           options={{ headerShown: false }} 
         />
         <Stack.Screen 
-          name="SobreNos" 
+          name="Sobre nós" 
           component={SobreNos} 
           options={{ headerShown: false }} 
         />
