@@ -2,6 +2,7 @@ import {View, Text, TextInput, Pressable, ImageBackground, Modal} from "react-na
 import {Component} from "react";
 import style from "./style"
 
+
 export default class redefinir_senha extends Component{
 state = {
 
@@ -12,17 +13,20 @@ render(){
   return (
 <View style={style.view}>
         {/* Botão do menu */}
-        <View style={style.menu}>
-          <Pressable
-            style={style.botoes}
-            onPress={() =>
-              this.props.navigation.navigate("Menu", { pagAnterior: "Redefinir Senha" })
-            }
-          >
-            <Text style={style.botoes_text}>Menu</Text>
+       <View style = {style.menu}>
+          <View style = {style.botao_home}>
+           <Text style={style.text_input}>Olá, {this.state.obj}</Text>
+         <Pressable style={style.botoes} 
+         onPress={() => this.props.navigation.navigate("Login")}>
+           <Text style={style.botoes_text}>Home</Text>
+          </Pressable>
+          </View>
+         <Pressable style={style.botoes}
+         onPress={() => this.props.navigation.navigate("Menu", {pagAnterior: "Sobre nós"} )}>
+           <Text style={style.botoes_text}>Menu</Text>
           </Pressable>
         </View>
-        
+        <View style= {{marginTop: 50}}>
         <Text style={[style.text, {fontSize : 20, textAlign: "center"}]}>Sobre Nós:</Text>
 
         <Text style={style.text}>
@@ -42,7 +46,7 @@ render(){
         Por isso, estamos sempre atualizados com as tendências
         do mercado e investindo em tecnologia para que você nade com confiança, conforto e desempenho máximo.
         </Text>
-
+        </View>
         </View>
         )
 }

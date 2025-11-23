@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "app_de_compra",
-    "slug": "snack-a5fa134e-d4c2-414a-8d64-95dc9bf21b01",
+    "name": "app_compra",
+    "slug": "snack-6f90850d-b919-457a-98b9-8344a808196f",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -24,6 +24,7 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "description": "github.com/gabrielkscruz-eng/App_compra @ Nov 22, 2025"
   }
 }

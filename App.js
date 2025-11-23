@@ -17,13 +17,11 @@ const Stack = createNativeStackNavigator();
 export default function App() {
   return (
 <NavigationContainer>
-      <Stack.Navigator initialRouteName="Sobre nós">
+      <Stack.Navigator initialRouteName="Loja">
         <Stack.Screen name="Menu" component={menu} options={{headerShown:false}}/>
         <Stack.Screen name="Login" component={login} options={{headerShown:false}}/>
         <Stack.Screen name="Redefinir Senha" component={redefinir_senha} options={{headerShown:false}}/>
         <Stack.Screen name="Sobre nós" component={sobre_nos}  options={{headerShown:false}}/>
-
-        <Stack.Screen name="produto" component={Produto} options={{headerShown:false}}/>
         <Stack.Screen name="Loja" component={loja} options={{headerShown:false}}/>        
         <Stack.Screen name="Pagamento" component={pagamento}  options={{headerShown:false}}/> 
       </Stack.Navigator>

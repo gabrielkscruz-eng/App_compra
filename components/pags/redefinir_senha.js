@@ -1,7 +1,7 @@
 import { View, Alert, Text, TextInput, Pressable, Modal } from "react-native";
 import { Component } from "react";
 import style from "./style";
-import ListaGlobal from "";
+import ListaGlobal from "./ArquivosGlobais/Lista_usuario";
 
 export default class RedefinirSenha extends Component {
   state = {
@@ -11,6 +11,9 @@ export default class RedefinirSenha extends Component {
   };
 
   redefinirSenha() {
+    if (!this.state.usuario || !this.state.senha) {
+    return Alert.alert("Erro", "Usuário ou senha estão vazios");
+    }
     ListaGlobal.removeUsuario(this.state.usuario);
     ListaGlobal.addUsuario({ nome: this.state.usuario, senha: this.state.senha });
     this.setState({ mostrarModal: false, usuario: "", senha: "" });
@@ -18,11 +21,18 @@ export default class RedefinirSenha extends Component {
   }
 
   abrirModal() {
-    if (ListaGlobal.existeUsuario(this.state.usuario) &&
-    ListaGlobal.verificar_usuario(this.state.usuario, this.state.senha)) {
-      this.setState({ mostrarModal: true, senha: "" });
-    } else {
-      Alert.alert("Usuário inexistente", "Entre com outro nome de usuário");
+
+    if (!this.state.usuario || !this.state.senha) {
+    return Alert.alert("Erro", "Usuário ou senha estão vazios");
+    }
+
+    if(ListaGlobal.verificar_online()){
+      if (ListaGlobal.existeUsuario(this.state.usuario) &&
+      ListaGlobal.verificar_usuario(this.state.usuario, this.state.senha)) {
+        this.setState({ mostrarModal: true, senha: "" });
+      } else {
+        Alert.alert("Usuário inexistente!", "Entre com outro nome de usuário.");
+      }
     }
   }
 
@@ -30,14 +40,17 @@ export default class RedefinirSenha extends Component {
     return (
       <View style={style.view}>
         {/* Botão do menu */}
-        <View style={style.menu}>
-          <Pressable
-            style={style.botoes}
-            onPress={() =>
-              this.props.navigation.navigate("Menu", { pagAnterior: "Redefinir Senha" })
-            }
-          >
-            <Text style={style.botoes_text}>Menu</Text>
+       <View style = {style.menu}>
+          <View style = {style.botao_home}>
+           <Text style={style.text_input}>Olá, {this.state.obj}</Text>
+         <Pressable style={style.botoes} 
+         onPress={() => this.props.navigation.navigate("Login")}>
+           <Text style={style.botoes_text}>Home</Text>
+          </Pressable>
+          </View>
+         <Pressable style={style.botoes} 
+         onPress={() => this.props.navigation.navigate("Menu", {pagAnterior: "Redefinir Senha"} )}>
+           <Text style={style.botoes_text}>Menu</Text>
           </Pressable>
         </View>
 

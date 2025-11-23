@@ -15,6 +15,7 @@
     "@expo/vector-icons": "^15.0.3",
     "react-native-paper": "4.9.2",
     "react-native-screens": "~4.16.0",
+    "react-native-elements": "*",
     "@react-navigation/native": "7.1.21",
     "@react-navigation/bottom-tabs": "*",
     "@react-navigation/native-stack": "*",

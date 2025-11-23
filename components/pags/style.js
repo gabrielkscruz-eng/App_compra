@@ -1,3 +1,5 @@
+
+
 import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
@@ -22,6 +24,11 @@ const styles = StyleSheet.create({
     color: "#0D0D0D",
     fontSize: 16,
     fontWeight: "600",
+  },
+
+   caixa : {
+    alignItems : "center",
+    justifyContent: "center"
   },
 
   // Texto comum
@@ -79,8 +86,10 @@ const styles = StyleSheet.create({
     alignItems: "center",
     backgroundColor: "#FFFFFF",
     paddingHorizontal: 12,
+    marginBottom:50,
+    marginTop: 1
   },
-  // Tela do Modal
+   // Tela do Modal
   modal : {
 
     borderColor: "#E50914",
@@ -104,12 +113,22 @@ const styles = StyleSheet.create({
   // estilo do menu
   menu : {
     position: 'absolute',
-    flex: 1,
+    top: 10,
+    padding: 10,
+    },
+      // usuario e botão home
+  usuario_login:{
+    position: 'absolute',
     top: 10,
     right: 10,
-    padding: 10   
-  }
-});
+    padding: 10 
+  },
+  //botão home text input
+  botao_home:{
+    flexDirection: "row",
+    alignItems: 'center',
+  },
 
+});
 
 export default styles;
