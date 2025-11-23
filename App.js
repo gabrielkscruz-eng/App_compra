@@ -1,31 +1,52 @@
-// Pag:
-import login from "./components/pags/login"
-import pagamento from "./components/pags/pagamento"
-import loja from "./components/pags/loja"
-import redefinir_senha from "./components/pags/redefinir_senha"
-import Produto from "./components/pags/Produto"
-import menu from "./components/pags/menu"
-import sobre_nos from "./components/pags/sobre_nos"
-// Navegação de pag:
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { NavigationContainer } from '@react-navigation/native';
-import {View, Text, TextInput, Pressable, ImageBackground, Modal} from "react-native";
-import style from "./components/pags/style";
+// Páginas
+import Login from "./components/pags/login";
+import Pagamento from "./components/pags/pagamento";
+import Loja from "./components/pags/loja";
+import RedefinirSenha from "./components/pags/redefinir_senha";
+import Menu from "./components/pags/menu";
+import SobreNos from "./components/pags/sobre_nos";
+
+// Navegação
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { NavigationContainer } from "@react-navigation/native";
 
 const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
-<NavigationContainer>
-      <Stack.Navigator initialRouteName="Loja">
-        <Stack.Screen name="Menu" component={menu} options={{headerShown:false}}/>
-        <Stack.Screen name="Login" component={login} options={{headerShown:false}}/>
-        <Stack.Screen name="Redefinir Senha" component={redefinir_senha} options={{headerShown:false}}/>
-        <Stack.Screen name="Sobre nós" component={sobre_nos}  options={{headerShown:false}}/>
-        <Stack.Screen name="Loja" component={loja} options={{headerShown:false}}/>        
-        <Stack.Screen name="Pagamento" component={pagamento}  options={{headerShown:false}}/> 
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Login">
+        <Stack.Screen 
+          name="Menu" 
+          component={Menu} 
+          options={{ headerShown: false }} 
+        />
+        <Stack.Screen 
+          name="Login" 
+          component={Login} 
+          options={{ headerShown: false }} 
+        />
+        <Stack.Screen 
+          name="RedefinirSenha" 
+          component={RedefinirSenha} 
+          options={{ headerShown: false }} 
+        />
+        <Stack.Screen 
+          name="SobreNos" 
+          component={SobreNos} 
+          options={{ headerShown: false }} 
+        />
+        <Stack.Screen 
+          name="Loja" 
+          component={Loja} 
+          options={{ headerShown: false }} 
+        />
+        <Stack.Screen 
+          name="Pagamento" 
+          component={Pagamento} 
+          options={{ headerShown: false }} 
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
 }
-

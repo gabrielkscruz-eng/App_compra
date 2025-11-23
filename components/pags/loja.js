@@ -13,6 +13,13 @@ export default class Loja extends Component {
     produto_selecionado: null,
   };
 
+  // Adiciona produto ao carrinho
+  adicionarCarrinho = (item) => {
+    Lista_produtos.adicionarCarrinho(item); 
+    this.setState({ lista_produtos: [...this.state.lista_produtos] }); 
+    alert(`${item.nome} adicionado ao carrinho!`);
+  };
+
   // Marca apenas 1 produto como selecionado
   marcaItem = (id) => {
     this.setState((prevState) => ({
@@ -24,12 +31,12 @@ export default class Loja extends Component {
     }));
   };
 
-  // Abrir modal de um produto
+  // Abre modal do produto
   abrirModal = (item) => {
     this.setState({ status_modal: true, produto_selecionado: item });
   };
 
-  // Fechar modal
+  // Fecha modal
   fecharModal = () => {
     this.setState({ status_modal: false, produto_selecionado: null });
   };
@@ -40,9 +47,9 @@ export default class Loja extends Component {
   };
 
   render() {
-    const { lista_produtos, pesquisa, status_modal, produto_selecionado } =
-      this.state;
+    const { lista_produtos, pesquisa, status_modal, produto_selecionado } = this.state;
 
+    // Filtra produtos pelo texto da pesquisa
     const produtosFiltrados = lista_produtos.filter((item) =>
       item.nome.toLowerCase().includes(pesquisa.toLowerCase())
     );
@@ -79,7 +86,7 @@ export default class Loja extends Component {
           </View>
         </View>
 
-        {/* FLATLIST DE PRODUTOS */}
+        {/* LISTA DE PRODUTOS */}
         <View style={{ flex: 1, marginTop: 205 }}>
           <FlatList
             data={produtosFiltrados}
@@ -90,7 +97,8 @@ export default class Loja extends Component {
                 this.marcaItem,
                 status_modal && produto_selecionado?.id === item.id,
                 produto_selecionado,
-                this.fecharModal
+                this.fecharModal,
+                this.adicionarCarrinho
               )
             }
           />

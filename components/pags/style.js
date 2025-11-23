@@ -1,9 +1,9 @@
-
-
 import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
+  // =======================
   // Botões gerais
+  // =======================
   botoes: {
     backgroundColor: "#FFFFFF",
     borderColor: "#F2F2F2",
@@ -19,19 +19,47 @@ const styles = StyleSheet.create({
     shadowRadius: 4,
     elevation: 3,
   },
-  // estilo dos botões
   botoes_text: {
     color: "#0D0D0D",
     fontSize: 16,
     fontWeight: "600",
   },
 
-   caixa : {
-    alignItems : "center",
-    justifyContent: "center"
+  // =======================
+  // Containers e caixas
+  // =======================
+  caixa: {
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  view: {
+    flex: 1,
+    borderColor: "#E50914",
+    borderWidth: 8,
+    borderRadius: 20,
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "#FFFFFF",
+    paddingHorizontal: 12,
+    marginBottom: 50,
+    marginTop: 1,
+  },
+  text_text_input: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    width: "90%",
+    backgroundColor: "#FFFFFF",
+    marginVertical: 6,
+  },
+  botao_home: {
+    flexDirection: "row",
+    alignItems: "center",
   },
 
-  // Texto comum
+  // =======================
+  // Texto e Inputs
+  // =======================
   text: {
     color: "#0D0D0D",
     backgroundColor: "#F2F2F2",
@@ -42,8 +70,6 @@ const styles = StyleSheet.create({
     marginVertical: 5,
     fontSize: 16,
   },
-
-  // Entrada de texto
   text_input: {
     color: "#0D0D0D",
     borderColor: "#F2F2F2",
@@ -56,7 +82,9 @@ const styles = StyleSheet.create({
     fontSize: 16,
   },
 
+  // =======================
   // Imagens
+  // =======================
   image: {
     width: "100%",
     height: "40%",
@@ -67,31 +95,20 @@ const styles = StyleSheet.create({
     margin: 15,
   },
 
-  // Texto + input lado a lado
-  text_text_input: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "center",
-    width: "90%",
-    backgroundColor: "#FFFFFF",
-    marginVertical: 6,
+  // =======================
+  // Imagens de Fundo
+  // =======================
+  image_fundo: {
+    width: "100%",
+    height: "40%",
+    resizeMode: "contain",
+    margin: 15,
   },
-  // Container principal da tela
-  view: {
-    flex: 1,
-    borderColor: "#E50914",
-    borderWidth: 8,
-    borderRadius: 20,
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "#FFFFFF",
-    paddingHorizontal: 12,
-    marginBottom:50,
-    marginTop: 1
-  },
-   // Tela do Modal
-  modal : {
 
+  // =======================
+  // Modal
+  // =======================
+  modal: {
     borderColor: "#E50914",
     borderWidth: 8,
     borderRadius: 20,
@@ -100,35 +117,31 @@ const styles = StyleSheet.create({
     backgroundColor: "#FFFFFF",
     paddingHorizontal: 12,
   },
-  modal_caixa : {
-    alignItems : "center",
-    justifyContent: "center"
+  modal_caixa: {
+    alignItems: "center",
+    justifyContent: "center",
   },
   modal_fundo: {
-  flex: 1,
-  backgroundColor: "rgba(0,0,0,0.4)", 
-  justifyContent: "center",          
-  alignItems: "center",               
-  },
-  // estilo do menu
-  menu : {
-    position: 'absolute',
-    top: 10,
-    padding: 10,
-    },
-      // usuario e botão home
-  usuario_login:{
-    position: 'absolute',
-    top: 10,
-    right: 10,
-    padding: 10 
-  },
-  //botão home text input
-  botao_home:{
-    flexDirection: "row",
-    alignItems: 'center',
+    flex: 1,
+    backgroundColor: "rgba(0,0,0,0.4)",
+    justifyContent: "center",
+    alignItems: "center",
   },
 
+  // =======================
+  // Menu e login
+  // =======================
+  menu: {
+    position: "absolute",
+    top: 10,
+    padding: 10,
+  },
+  usuario_login: {
+    position: "absolute",
+    top: 10,
+    right: 10,
+    padding: 10,
+  },
 });
 
 export default styles;
