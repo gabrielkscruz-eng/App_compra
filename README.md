@@ -1,11 +1,43 @@
-# Sample Snack app
+# App Compra 🏊‍♂️💳
 
-Open the `App.js` file to start writing some code. You can preview the changes directly on your phone or tablet by scanning the **QR code** or use the iOS or Android emulators. When you're done, click **Save** and share the link!
+Um aplicativo mobile de compra e gerenciamento de aulas de natação desenvolvido em **React Native**.
 
-When you're ready to see everything that Expo provides (or if you want to use your own editor) you can **Download** your project and use it with [expo cli](https://docs.expo.dev/get-started/installation/#expo-cli)).
+## 📋 Sobre o Projeto
 
-All projects created in Snack are publicly available, so you can easily share the link to this project via link, or embed it on a web page with the `<>` button.
+Este projeto foi criado para facilitar a compra e o controle de pacotes de aulas de natação, oferecendo uma plataforma intuitiva e prática para usuários adquirirem serviços de natação diretamente pelo smartphone.
 
-If you're having problems, you can tweet to us [@expo](https://twitter.com/expo) or ask in our [forums](https://forums.expo.dev/c/expo-dev-tools/61) or [Discord](https://chat.expo.dev/).
+## 🎯 Objetivo
 
-Snack is Open Source. You can find the code on the [GitHub repo](https://github.com/expo/snack).
+Fornecer uma solução que:
+- Facilite a compra de pacotes de natação
+- Permita o gerenciamento de inscrições
+- Ofereça uma experiência de compra simples e segura
+- Funcione em iOS e Android
+
+## 🛠️ Tecnologias
+
+- **React Native** - Framework para desenvolvimento mobile
+- **JavaScript** - Linguagem de programação principal
+
+## 🚀 Como Usar
+
+[Adicione instruções de instalação, como rodar o aplicativo e como realizar compras aqui]
+
+## 📝 Contribuições
+
+Contribuições são bem-vindas! Sinta-se à vontade para:
+- Reportar bugs
+- Sugerir melhorias
+- Enviar pull requests
+
+## 📄 Licença
+
+[Adicione informação sobre a licença do projeto]
+
+## 👨‍💻 Autor
+
+Desenvolvido por [gabrielkscruz-eng](https://github.com/gabrielkscruz-eng)
+
+---
+
+**Último update:** 28 de março de 2026
