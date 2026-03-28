@@ -19,9 +19,6 @@ Fornecer uma solução que:
 - **React Native** - Framework para desenvolvimento mobile
 - **JavaScript** - Linguagem de programação principal
 
-## 🚀 Como Usar
-
-[Adicione instruções de instalação, como rodar o aplicativo e como realizar compras aqui]
 
 ## 📝 Contribuições
 
@@ -30,9 +27,6 @@ Contribuições são bem-vindas! Sinta-se à vontade para:
 - Sugerir melhorias
 - Enviar pull requests
 
-## 📄 Licença
-
-[Adicione informação sobre a licença do projeto]
 
 ## 👨‍💻 Autor
 
